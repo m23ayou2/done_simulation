@@ -159,13 +159,18 @@ The wind is generated in the Inertial Frame (or Wind Frame) and must be transfor
 
 The gust angular rates $\boldsymbol{\omega}_{gust} = [p_g, q_g, r_g]^T$ are derived from the spatial gradients of the linear gusts:
 
+Most aircraft simulations using von Kármán gust filters implement:
+
 $$
+\begin{cases}
 \begin{aligned}
-p_g &= \frac{\partial w_g}{\partial y} \approx \frac{\sigma_w \sqrt{0.8}}{L_w^{1/3}} \eta_{p} \\
-q_g &= \frac{\partial w_g}{\partial x} \approx \frac{1}{1 + \frac{4b}{\pi V}s} \cdot \dots \text{(Often simplified)} \\
-r_g &= -\frac{\partial v_g}{\partial x}
+    p_g &= 0 \\
+    q_g &= \frac{1}{2V} \dot{w}_g \\
+    r_g &= -\frac{1}{2V} \dot{v}_g
 \end{aligned}
+\end{cases}
 $$
+
 
 For a standard quadrotor simulation, a simplified linear gradient approximation is often used:
 
