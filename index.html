@@ -360,7 +360,7 @@
           \)
           </p>
           
-          <h3>Von Kármán wind turbulence model</h3>
+          <h3>Dryden wind turbulence model</h3>
           <p>The wind velocity in inertial frame consists of three components:</p>
           
           $$
@@ -380,9 +380,9 @@
           
           $$
           \begin{aligned}
-          \Phi_{u_g}(\Omega) &= \frac{2\sigma_u^2 L_u}{\pi} \frac{1}{\left[1 + (1.339 L_u \Omega)^2\right]^{5/6}} \\
-          \Phi_{v_g}(\Omega) &= \frac{\sigma_v^2 L_v}{\pi} \frac{1 + \frac{8}{3}(1.339 L_v \Omega)^2}{\left[1 + (1.339 L_v \Omega)^2\right]^{11/6}} \\
-          \Phi_{w_g}(\Omega) &= \frac{\sigma_w^2 L_w}{\pi} \frac{1 + \frac{8}{3}(1.339 L_w \Omega)^2}{\left[1 + (1.339 L_w \Omega)^2\right]^{11/6}}
+          \Phi_{u_g}(\Omega) &= \frac{2\sigma_u^2 L_u}{\pi} \frac{1}{\left[1 + (L_u \Omega)^2\right]} \\
+          \Phi_{v_g}(\Omega) &= \frac{2\sigma_v^2 L_v}{\pi} \frac{1 + 12(L_v \Omega)^2}{\left[1 + 4(L_v \Omega)^2\right]} \\
+          \Phi_{w_g}(\Omega) &= \frac{2\sigma_w^2 L_w}{\pi} \frac{1 + 12(L_w \Omega)^2}{\left[1 + 4(L_w \Omega)^2\right]^2}
           \end{aligned}
           $$
           
